@@ -350,6 +350,40 @@ body.menu-open .top-nav { background: rgba(15,17,21,0.95); backdrop-filter: blur
 @keyframes tickerScroll { to { transform: translateX(-50%); } }
 
 /* ══════════════════════════════════
+   SKILLS
+   ══════════════════════════════════ */
+.section-intro {
+  max-width: 760px; margin: 0 auto 48px; text-align: center;
+}
+.skill-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;
+}
+.skill-card {
+  background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 32px;
+  padding: 32px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.8s var(--silk-ease), border-color 0.8s var(--silk-ease);
+}
+.skill-icon {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--silver); margin-bottom: 16px;
+}
+.skill-card h3 {
+  font-size: 1.08rem; font-weight: 600; color: var(--ivory); margin-bottom: 12px;
+}
+.skill-card p {
+  font-size: 0.9rem; font-weight: 300; line-height: 1.75; color: var(--slate-light); margin-bottom: 16px;
+}
+.skill-card ul {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+}
+.skill-card li {
+  font-size: 0.82rem; font-weight: 400; color: var(--slate-light); padding-left: 16px; position: relative;
+}
+.skill-card li::before {
+  content: ''; position: absolute; left: 0; top: 0.58em; width: 6px; height: 6px; border-radius: 50%; background: var(--silver); opacity: 0.7;
+}
+
+/* ══════════════════════════════════
    FEATURE SHOWCASE
    ══════════════════════════════════ */
 .feature {
@@ -635,6 +669,7 @@ body.menu-open .top-nav { background: rgba(15,17,21,0.95); backdrop-filter: blur
   .nav-toggle { display: block; }
   .side-panel { display: none; }
   .feature { grid-template-columns: 1fr; gap: 40px; }
+  .skill-grid { grid-template-columns: 1fr 1fr; }
   .feature.reverse { direction: ltr; }
   .feature-visual { height: 260px; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
@@ -653,6 +688,7 @@ body.menu-open .top-nav { background: rgba(15,17,21,0.95); backdrop-filter: blur
   .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
   .section { padding: 80px 0; }
   .feature-visual { height: 240px; border-radius: 24px; }
+  .skill-grid { grid-template-columns: 1fr; }
   .pricing-card { padding: 32px 24px; border-radius: 28px; }
   .pricing-card.featured { padding-top: 52px; }
   .integrations-grid { grid-template-columns: repeat(2, 1fr); }
